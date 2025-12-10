@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fi dounya wal ahyri - Notre espace d'amour</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Authentification -->
+    <div class="auth-container" id="auth-container">
+        <div class="auth-box">
+            <div class="auth-header">
+                <h1>Fi dounya wal ahyri</h1>
+                <p>Notre espace privé pour renforcer notre amour</p>
+            </div>
+            <div class="auth-form">
+                <div class="error-message" id="error-message"></div>
+                <div class="success-message" id="success-message"></div>
+                
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-username">Nom d'utilisateur</label>
+                        <input type="text" id="login-username" placeholder="elhadji ou fatou" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Mot de passe</label>
+                        <input type="password" id="login-password" placeholder="Votre mot de passe" required>
+                    </div>
+                    <button type="submit" class="btn">Se connecter</button>
+                    <div class="form-footer">
+                        <p>Identifiants par défaut: elhadji/elhadji123 ou fatou/fatou123</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Site principal -->
+    <div class="site-container" id="site-container">
+        <!-- Header -->
+        <header class="site-header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-heart logo-icon"></i>
+                    <h1>Fi dounya wal ahyri</h1>
+                </div>
+                
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#" class="nav-link active" data-page="dashboard"><i class="fas fa-home"></i> Tableau de bord</a></li>
+                        <li><a href="#" class="nav-link" data-page="mood"><i class="fas fa-smile"></i> Mood2Love</a></li>
+                        <li><a href="#" class="nav-link" data-page="games"><i class="fas fa-gamepad"></i> CouplePlay</a></li>
+                        <li><a href="#" class="nav-link" data-page="gift"><i class="fas fa-gift"></i> GiftRadar</a></li>
+                        <li><a href="#" class="nav-link" data-page="messages"><i class="fas fa-comments"></i> Messages</a></li>
+                        <li><a href="#" class="nav-link" data-page="memories"><i class="fas fa-images"></i> Souvenirs</a></li>
+                        <li><a href="#" class="nav-link" data-page="profile"><i class="fas fa-user"></i> Profil</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="user-menu">
+                    <div class="user-avatar" id="user-avatar">E</div>
+                    <div class="user-info">
+                        <span id="user-name-display">Elhadji</span>
+                        <button class="logout-btn" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Déconnexion</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard -->
+        <section class="page active" id="dashboard-page">
+            <div class="dashboard">
+                <div class="welcome-section">
+                    <h2 id="welcome-message">Bonjour Elhadji & Fatou</h2>
+                    <p>Votre espace d'amour et de complicité. Découvrez les modules disponibles pour renforcer votre relation.</p>
+                </div>
+                
+                <h3>Nos modules d'amour</h3>
+                <div class="modules-grid">
+                    <div class="module-card" data-page="mood">
+                        <h3><i class="fas fa-smile"></i> Mood2Love</h3>
+                        <p>Suivez vos humeurs, partagez vos émotions et recevez des suggestions pour renforcer votre connexion.</p>
+                        <span class="module-status status-active">Activé</span>
+                    </div>
+                    
+                    <div class="module-card" data-page="games">
+                        <h3><i class="fas fa-gamepad"></i> CouplePlay</h3>
+                        <p>Jeux et défis pour vous amuser et tester votre complicité. Qui connaît le mieux l'autre ?</p>
+                        <span class="module-status status-active">Activé</span>
+                    </div>
+                    
+                    <div class="module-card" data-page="gift">
+                        <h3><i class="fas fa-gift"></i> GiftRadar</h3>
+                        <p>Ne cherchez plus d'idées cadeaux. Basé sur vos profils et envies secrètes.</p>
+                        <span class="module-status status-active">Activé</span>
+                    </div>
+                    
+                    <div class="module-card" data-page="messages">
+                        <h3><i class="fas fa-comments"></i> LoveChat</h3>
+                        <p>Messagerie privée ultra sécurisée pour échanger vos secrets et vos déclarations d'amour.</p>
+                        <span class="module-status status-active">Activé</span>
+                    </div>
+                    
+                    <div class="module-card" data-page="memories">
+                        <h3><i class="fas fa-images"></i> Souvenirs</h3>
+                        <p>Archivez vos moments spéciaux, photos et souvenirs pour les revivre ensemble.</p>
+                        <span class="module-status status-active">Activé</span>
+                    </div>
+                    
+                    <div class="module-card" data-page="profile">
+                        <h3><i class="fas fa-user"></i> Profil</h3>
+                        <p>Gérez vos informations personnelles, préférences et paramètres de confidentialité.</p>
+                        <span class="module-status status-active">Activé</span>
+                    </div>
+                </div>
+                
+                <div class="calendar-section" style="margin-top: 30px;">
+                    <h3>Prochains événements</h3>
+                    <div id="events-list" class="events-container">
+                        <!-- Les événements seront chargés dynamiquement -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mood Page -->
+        <section class="page" id="mood-page">
+            <div class="page-header">
+                <h2><i class="fas fa-smile"></i> Mood2Love</h2>
+                <p>Suivi émotionnel du couple</p>
+            </div>
+            
+            <div class="mood-container">
+                <div class="mood-tracker">
+                    <h3>Comment te sens-tu aujourd'hui ?</h3>
+                    <div class="mood-options">
+                        <div class="mood-option" data-mood="happy">
+                            <div class="mood-emoji">😊</div>
+                            <div class="mood-name">Heureux(se)</div>
+                        </div>
+                        <div class="mood-option" data-mood="inlove">
+                            <div class="mood-emoji">😍</div>
+                            <div class="mood-name">Amoureux(se)</div>
+                        </div>
+                        <div class="mood-option" data-mood="calm">
+                            <div class="mood-emoji">😌</div>
+                            <div class="mood-name">Calme</div>
+                        </div>
+                        <div class="mood-option" data-mood="stressed">
+                            <div class="mood-emoji">😥</div>
+                            <div class="mood-name">Stressé(e)</div>
+                        </div>
+                        <div class="mood-option" data-mood="tired">
+                            <div class="mood-emoji">😴</div>
+                            <div class="mood-name">Fatigué(e)</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mood-note">Message secret du jour (optionnel)</label>
+                        <textarea id="mood-note" placeholder="Partagez une pensée, un souhait ou un merci pour votre partenaire..." rows="3"></textarea>
+                    </div>
+                    
+                    <button class="btn" id="save-mood">Enregistrer mon humeur</button>
+                </div>
+                
+                <div class="mood-tracker">
+                    <h3>Baromètre du couple</h3>
+                    <div id="mood-chart" class="chart-container">
+                        <!-- Le graphique sera généré dynamiquement -->
+                    </div>
+                    <p class="mood-summary" id="mood-summary">Chargement des données d'humeur...</p>
+                </div>
+                
+                <div class="mood-history">
+                    <h3>Humeurs récentes</h3>
+                    <div id="mood-history-list" class="history-list">
+                        <!-- Les humeurs seront chargées dynamiquement -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Games Page -->
+        <section class="page" id="games-page">
+            <div class="page-header">
+                <h2><i class="fas fa-gamepad"></i> CouplePlay</h2>
+                <p>Jeux et défis pour renforcer votre complicité</p>
+            </div>
+            
+            <div class="games-container" id="games-container">
+                <!-- Les jeux seront chargés dynamiquement -->
+            </div>
+        </section>
+
+        <!-- Gift Page -->
+        <section class="page" id="gift-page">
+            <div class="page-header">
+                <h2><i class="fas fa-gift"></i> GiftRadar</h2>
+                <p>Idées cadeaux intelligentes pour votre partenaire</p>
+            </div>
+            
+            <div class="gift-container" id="gift-container">
+                <!-- Les suggestions cadeaux seront chargées dynamiquement -->
+            </div>
+        </section>
+
+        <!-- Messages Page -->
+        <section class="page" id="messages-page">
+            <div class="page-header">
+                <h2><i class="fas fa-comments"></i> LoveChat</h2>
+                <p>Messagerie privée ultra sécurisée</p>
+            </div>
+            
+            <div class="chat-container">
+                <div class="chat-sidebar">
+                    <h3>Conversations</h3>
+                    <div class="conversation active">
+                        <p><strong id="chat-couple-names">Elhadji & Fatou</strong></p>
+                        <p>Notre espace d'amour</p>
+                    </div>
+                    
+                    <h3>Confessions secrètes</h3>
+                    <p id="secret-message-status">Aucun message secret pour le moment</p>
+                    <button class="btn" id="view-secret-btn">Écrire une confession</button>
+                </div>
+                
+                <div class="chat-messages">
+                    <h3>Messages avec <span id="chat-partner-name">Fatou</span></h3>
+                    <div class="messages-list" id="messages-list">
+                        <!-- Les messages seront chargés dynamiquement -->
+                    </div>
+                    
+                    <div class="message-input">
+                        <input type="text" id="message-input" placeholder="Écrivez votre message d'amour...">
+                        <button id="send-message"><i class="fas fa-paper-plane"></i> Envoyer</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Souvenirs Page -->
+        <section class="page" id="memories-page">
+            <div class="page-header">
+                <h2><i class="fas fa-images"></i> Souvenirs</h2>
+                <p>Nos moments précieux</p>
+            </div>
+            
+            <div class="memories-container" id="memories-container">
+                <!-- Les souvenirs seront chargés dynamiquement -->
+            </div>
+        </section>
+
+        <!-- Profil Page -->
+        <section class="page" id="profile-page">
+            <div class="page-header">
+                <h2><i class="fas fa-user"></i> Notre Profil</h2>
+                <p>Gérez vos informations et paramètres</p>
+            </div>
+            
+            <div class="profile-container" id="profile-container">
+                <!-- Le profil sera chargé dynamiquement -->
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p>Fi dounya wal ahyri - Notre espace d'amour éternel</p>
+                <p>Ce site est exclusivement réservé à notre couple. Toutes les données sont chiffrées et sécurisées.</p>
+                <div class="security-note">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Connexion sécurisée - Données privées - Chiffrement de bout en bout</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal" id="secret-message-modal">
+        <div class="modal-content">
+            <h3>Écrire une confession secrète</h3>
+            <textarea id="secret-message-text" placeholder="Écrivez votre message secret pour votre partenaire..."></textarea>
+            <div class="modal-buttons">
+                <button class="btn" id="send-secret-message">Envoyer secrètement</button>
+                <button class="btn btn-secondary" id="cancel-secret-message">Annuler</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
