@@ -258,6 +258,7 @@ async function getEvents() {
         return { data: staticEvents, error: null };
     }
 }
+
 // Exporter les fonctions
 window.supabaseFunctions = {
     authenticateUser,
