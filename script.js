@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         errorMessage.style.display = 'none';
         successMessage.style.display = 'none';
-        
+    
         // Vérification SIMPLE - identifiants fixes
         const validUsers = {
             'elhadji': { 
